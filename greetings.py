@@ -1,9 +1,21 @@
-# "What's your name?"
-# "Hello XY, I am your phone book."
 
+name = input("What's your name? ")
 
-# "How old are you?"
-# - "You are so young! Life is ahead of you!"
-# - "That's a nice age!"
-# - "You must be very wise!"
-# - "That doesn't seem to be an integer."
+print ("Hello " + name + " I am your phonebook")
+
+while True:
+    age = input("How old are you?  ")
+    try:
+        age = int(age)
+        break
+    except ValueError:
+        print("That doesn't seem to be an integer.")
+
+if age < 18:
+    print("You are so young! Life is ahead of you!")
+elif age >=18 and age <=40 : 
+    print ("That's a nice age")
+else:
+    age<=40
+    print("you must be very wise!")    
+
